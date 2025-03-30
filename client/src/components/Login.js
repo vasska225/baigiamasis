@@ -5,7 +5,7 @@ import useAuthStore from '../state/useAuthStore';
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const { setUser, setToken, token } = useAuthStore();
+    const { setUser, setToken, token } = useAuthStore(); //zustandas
     const navigate = useNavigate();
 
     if (token) {

@@ -188,7 +188,6 @@ const Messages = () => {
                     </ul>
                 )}
                 <div className="mt-auto text-center">
-                    Footer
                 </div>
             </aside>
 
@@ -202,9 +201,9 @@ const Messages = () => {
                             ) : (
                                 messages.map((msg) => (
                                     <div key={msg._id} className="mb-2">
-                    <span className="font-semibold">
-                      {msg.sender === user.userId ? 'You' : (msg.senderData?.username || msg.senderData?.email)}:
-                    </span>{' '}
+                                        <span className="font-semibold">
+                                          {msg.sender === user.userId ? 'You' : (msg.senderData?.username || msg.senderData?.email)}:
+                                        </span>{' '}
                                         <span>{msg.text}</span>
                                         <div className="text-xs text-gray-400">
                                             {new Date(msg.createdAt).toLocaleString()}

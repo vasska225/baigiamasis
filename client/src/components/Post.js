@@ -57,13 +57,21 @@ const Post = () => {
     const handleBack = () => {
         if (from) {
             switch (from.toUpperCase()) {
-                case "HOME": navigate('/'); return;
-                case "FAVORITES": navigate('/favorites'); return;
+                case "HOME":
+                    navigate('/');
+                    break;
+                case "FAVORITES":
+                    navigate('/favorites');
+                    break;
+                default:
+                    navigate('/');
+                    break;
             }
         } else {
-            navigate('/')
+            navigate('/');
         }
     };
+
 
     const submitComment = async () => {
         if (!commentText) return;
